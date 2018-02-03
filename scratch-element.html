@@ -1,0 +1,36 @@
+<link rel="import" href="bower_components/polymer/polymer-element.html">
+
+<dom-module id="scratch-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `scratch-element`
+     * crypto element
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class ScratchElement extends Polymer.Element {
+      static get is() { return 'scratch-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'scratch-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(ScratchElement.is, ScratchElement);
+  </script>
+</dom-module>
